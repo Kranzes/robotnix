@@ -5836,13 +5836,13 @@
     "url": "https://github.com/LineageOS/www"
   },
   "lineage/wiki": {
-    "dateTime": 1635070331,
+    "dateTime": 1635171364,
     "groups": [
       "infra"
     ],
-    "rev": "81ab4100b99cfade71f8078735904e715f2930ab",
+    "rev": "6c9b171b1cada56ea3a6ac70354f05633519b8fb",
     "revisionExpr": "master",
-    "sha256": "0pm6737fdpbylkvaj92sz1zxd1m03r9vl8dis6x6qkcmrzsvfr7l",
+    "sha256": "124qb2k2wp33z6zgl54003kqjqi66hd8rrrgjv0pqk5dkh5619lq",
     "url": "https://github.com/LineageOS/lineage_wiki"
   },
   "packages/apps/AudioFX": {
