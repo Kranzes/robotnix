@@ -29,8 +29,12 @@ in mkIf (config.flavor == "grapheneos") (mkMerge [
   source.dirs = lib.importJSON (./. + "/repo-${grapheneOSRelease}.json");
 
   apv.enable = mkIf (elem config.deviceFamily phoneDeviceFamilies) (mkDefault true);
-  apv.buildID = mkDefault "SP1A.210812.015";
-
+  apv.buildID = mkDefault (
+    if (elem config.device [ "crosshatch" "blueline" ]) then "SP1A.210812.015"
+    else if (elem config.device [ "bonito" "sargo" ]) then "SP1A.211105.002"
+    else if (elem config.device [ "barbet" ]) then "SP1A.211105.003"
+    else "SP1A.211105.004"
+  );
 
   # Not strictly necessary for me to set these, since I override the source.dirs above
   source.manifest.url = mkDefault "https://github.com/GrapheneOS/platform_manifest.git";
@@ -38,7 +42,8 @@ in mkIf (config.flavor == "grapheneos") (mkMerge [
 
   warnings = (optional ((config.device != null) && !(elem config.deviceFamily supportedDeviceFamilies))
     "${config.device} is not a supported device for GrapheneOS")
-    ++ (optional (!(elem config.androidVersion [ 11 12 ])) "Unsupported androidVersion (!= 11 or 12) for GrapheneOS");
+    ++ (optional (!(elem config.androidVersion [ 12 ])) "Unsupported androidVersion (!= 12) for GrapheneOS")
+    ++ (optional (config.deviceFamily == "crosshatch") "crosshatch/blueline are considered legacy devices and receive only extended support updates from GrapheneOS and no longer receive vendor updates from Google");
 }
 {
   # Disable setting SCHED_BATCH in soong. Brings in a new dependency and the nix-daemon could do that anyway.

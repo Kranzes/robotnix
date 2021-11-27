@@ -11,7 +11,7 @@ let
   # TODO: Find a better way to do this?
   putInStore = path: if (lib.hasPrefix builtins.storeDir path) then path else (/. + path);
 
-  keysToGenerate = lib.unique (
+  keysToGenerate = lib.unique (lib.flatten (
                     map (key: "${config.device}/${key}") [ "releasekey" "platform" "shared" "media" ]
                     ++ (lib.optional (config.signing.avb.mode == "verity_only") "${config.device}/verity")
                     ++ (lib.optionals (config.androidVersion >= 10) [ "${config.device}/networkstack" ])
@@ -20,8 +20,8 @@ let
                     ++ (lib.optional config.signing.apex.enable config.signing.apex.packageNames)
                     ++ (lib.mapAttrsToList
                         (name: prebuilt: prebuilt.certificate)
-                        (lib.filterAttrs (name: prebuilt: prebuilt.certificate != "PRESIGNED") config.apps.prebuilt))
-                    );
+                        (lib.filterAttrs (name: prebuilt: prebuilt.enable && prebuilt.certificate != "PRESIGNED") config.apps.prebuilt))
+                    ));
 in
 {
   options = {
@@ -36,6 +36,15 @@ in
         default = [];
         type = types.listOf types.str;
         internal = true;
+      };
+
+      prebuiltImages = mkOption {
+        default = [];
+        type = types.listOf types.str;
+        internal = true;
+        description = ''
+          A list of prebuilt images to be added to target-files.
+        '';
       };
 
       avb = {
@@ -91,6 +100,13 @@ in
   config = let
     testKeysStorePath = config.source.dirs."build/make".src + /target/product/security;
   in {
+    assertions = [
+      {
+        assertion = (builtins.length cfg.prebuiltImages) != 0 -> config.androidVersion == 12;
+        message = "The --prebuilt-image patch is only applied to Android 12";
+      }
+    ];
+
     signing.keyStorePath = mkIf (!config.signing.enable) (mkDefault testKeysStorePath);
     signing.buildTimeKeyStorePath = mkMerge [
       (mkIf config.signing.enable (mkDefault "/keys"))
@@ -173,7 +189,8 @@ in
     in
       lib.mapAttrsToList (from: to: "--key_mapping ${from}=$KEYSDIR/${to}") keyMappings
       ++ lib.optionals cfg.avb.enable avbFlags
-      ++ lib.optionals cfg.apex.enable (map (k: "--extra_apks ${k}.apex=$KEYSDIR/${k} --extra_apex_payload_key ${k}.apex=$KEYSDIR/${k}.pem") cfg.apex.packageNames);
+      ++ lib.optionals cfg.apex.enable (map (k: "--extra_apks ${k}.apex=$KEYSDIR/${k} --extra_apex_payload_key ${k}.apex=$KEYSDIR/${k}.pem") cfg.apex.packageNames)
+      ++ lib.optionals (builtins.length cfg.prebuiltImages != 0) (map (image: "--prebuilt_image ${image}") cfg.prebuiltImages);
 
     otaArgs =
       if config.signing.enable
@@ -225,7 +242,7 @@ in
           # make_key exits with unsuccessful code 1 instead of 0
           make_key "$key" "/CN=Robotnix ''${key/\// }/" && exit 1
         else
-          echo "Skipping generating $key since it is already exists"
+          echo "Skipping generating $key key since it is already exists"
         fi
       done
 

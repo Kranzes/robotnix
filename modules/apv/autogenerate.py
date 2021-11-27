@@ -37,6 +37,7 @@ def main() -> None:
 
     needed_files = set()
     needed_modules = set()
+    needed_modules_with_arch = set()
     for filename in upstream_files:
         if filename not in built_files:
             key = filename_prefix + filename
@@ -44,6 +45,10 @@ def main() -> None:
                 # if filename.startswith('vendor/') or filename.startswith('system_ext/'):
                 if filename.startswith('vendor/'):
                     needed_modules.add(file_module_lookup[key])
+                    if filename.startswith('vendor/lib64/'):
+                        needed_modules_with_arch.add(file_module_lookup[key] + ":64")
+                    else:
+                        needed_modules_with_arch.add(file_module_lookup[key])
             else:
                 if not filename.startswith('vendor/lib/modules/'):
                     needed_files.add(filename)
@@ -76,14 +81,15 @@ def main() -> None:
     # Manual addition. Might not be needed if we include the corresponding stuff in system_ext
     vendor_skip_files.add('etc/vintf/manifest/manifest_wifi_ext.xml')
 
-    naked_config = {
+    apv_config = {
         # 'new-modules': [],
         'dep-dso': [
             dso for dso in DEP_DSOS
             if dso in needed_files
         ],
         # 'rro-overlays': [],
-        'forced-modules': sorted(set(modulename for modulename in needed_modules if modulename not in SKIP_MODULES)),
+        'forced-modules': sorted(set(modulename for modulename in needed_modules_with_arch
+                                     if modulename not in SKIP_MODULES)),
         'vendor-skip-files': sorted(vendor_skip_files),
         'system-bytecode': sorted(
             filename for filename in needed_files
@@ -114,11 +120,6 @@ def main() -> None:
         #     if (filename.startswith('product/') and not _is_bytecode(filename)
         #         and not (filename.endswith('.odex') or filename.endswith('.vdex')))
         # ),
-    }
-    apv_config = {
-        'api-30': {
-            'naked': naked_config
-        }
     }
 
     print(json.dumps(apv_config, sort_keys=True, indent=2, separators=(',', ': ')))

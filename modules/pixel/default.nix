@@ -32,6 +32,8 @@ let
     bramble = { family = "redfin"; name = "Pixel 4a (5G)"; };
     redfin = { family = "redfin"; name = "Pixel 5"; };
     barbet = { family = "barbet"; name = "Pixel 5a (5G)"; };
+    raven = { family = "raviole"; name = "Pixel 6 Pro"; };
+    oriole = { family = "raviole"; name = "Pixel 6"; };
   };
 
   # Make a uuid based on some string data
@@ -100,10 +102,10 @@ mkMerge [
   (mkIf (lib.elem config.deviceFamily [ "coral" "sunfish" "redfin" "barbet" ]) {
     signing.avb.mode = "vbmeta_chained_v2";
   })
-  (mkIf (config.deviceFamily == "sunfish") {
+  (mkIf (config.deviceFamily == "sunfish" && config.androidVersion >= 12) {
     signing.apex.packageNames = [ "com.android.vibrator.sunfish" ];
   })
-  (mkIf (lib.elem config.deviceFamily [ "sunfish" "redfin" "barbet" ]) {
+  (mkIf (lib.elem config.deviceFamily [ "bonito" "sunfish" "redfin" "barbet" ] && config.androidVersion >= 12) {
     signing.apex.packageNames = [ "com.android.vibrator.drv2624" ];
   })
 ]

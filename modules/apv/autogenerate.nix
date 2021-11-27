@@ -6,7 +6,7 @@
 let
   inherit (pkgs) lib;
   robotnix = configuration: import ../../default.nix { inherit configuration pkgs; };
-  devices = [ "crosshatch" "blueline" "bonito" "sargo" "coral" "flame" "sunfish" "bramble" "redfin" "barbet" ];
+  devices = [ "crosshatch" "blueline" "bonito" "sargo" "coral" "flame" "sunfish" "bramble" "redfin" "barbet" "raven" "oriole" ];
 
   deviceAttrs =
     (device: let
@@ -24,13 +24,18 @@ let
         '';
         envVars.ALLOW_MISSING_DEPENDENCIES = "true"; # Avoid warning about chre needing libadsprpc
       };
-      suggestedConfig = pkgs.runCommand "${device}.json" { nativeBuildInputs = [ pkgs.python3 ]; } ''
+      suggestedConfig = pkgs.runCommand "${device}-config.json" { nativeBuildInputs = [ pkgs.python3 ]; } ''
+        find ${pkgs.robotnix.unpackImg aospBuild.config.apv.img} -type f -printf "%P\n" | sort > upstream-files
+        find ${pkgs.robotnix.unpackImg aospBuild.img} -type f -printf "%P\n" | sort > built-files
+
         python3 ${./autogenerate.py} \
           ${aospBuild.config.device} \
           ${aospBuild.config.build.moduleInfo} \
-          ${aospBuild.config.build.apv.diff}/built-files \
-          ${aospBuild.config.build.apv.diff}/upstream-files \
-          > $out
+          built-files \
+          upstream-files \
+          > config.json
+
+      ${pkgs.jq}/bin/jq -s '.[0] * .[1]' ${pkgs.android-prepare-vendor.src}/${device}/config.json config.json > $out
       '';
       suggestedBuild = robotnix { inherit device; flavor = "vanilla"; apv.customConfig = lib.importJSON suggestedConfig; };
       AOSPAllianceBuild = robotnix { inherit device; flavor = "vanilla"; };
@@ -39,12 +44,11 @@ let
       '';
     in {
       inherit aospBuild;
-      aospDiff = aospBuild.config.build.apv.diff;
       inherit suggestedConfig;
       inherit jsonDiff;
       inherit suggestedBuild;
-      suggestedBuildDiff = suggestedBuild.config.build.apv.diff;
-      AOSPAllianceBuildDiff = AOSPAllianceBuild.config.build.apv.diff;
+      aospDiff = pkgs.robotnix.compareImagesQuickDiff aospBuild.config.apv.img aospBuild.img;
+      suggestedBuildDiff = pkgs.robotnix.compareImagesQuickDiff suggestedBuild.config.apv.img suggestedBuild.img;
     });
 in {
   devices = lib.genAttrs devices deviceAttrs;
