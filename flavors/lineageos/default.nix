@@ -112,26 +112,7 @@ in mkIf (config.flavor == "lineageos")
       # So we'll just build chromium webview ourselves.
       "external/chromium-webview".enable = false;
     }
-  ] ++ optionals (deviceMetadata ? "${config.device}") [
-    # Device-specific source dirs
-    (let
-      vendor = toLower deviceMetadata.${config.device}.vendor;
-      relpathWithDependencies = relpath: [ relpath ] ++ (flatten (map (p: relpathWithDependencies p) deviceDirs.${relpath}.deps));
-      relpaths = relpathWithDependencies "device/${vendor}/${config.device}";
-      filteredRelpaths = remove (attrNames repoDirs) relpaths; # Remove any repos that we're already including from repo json
-    in filterDirsAttrs (getAttrs filteredRelpaths deviceDirs))
-
-    # Vendor-specific source dirs
-    (let
-      _vendor = toLower deviceMetadata.${config.device}.vendor;
-      vendor = if config.device == "shamu" then "motorola" else _vendor;
-      relpath = "vendor/${vendor}";
-    in filterDirsAttrs (getAttrs [relpath] vendorDirs))
-  ] ++ optional (config.device == "bacon")
-    # Bacon needs vendor/oppo in addition to vendor/oneplus
-    # See https://github.com/danielfullmer/robotnix/issues/26
-    (filterDirsAttrs (getAttrs ["vendor/oppo"] vendorDirs))
-  );
+  ]);
 
   source.manifest.url = mkDefault "https://github.com/LineageOS/android.git";
   source.manifest.rev = mkDefault "refs/heads/${LineageOSRelease}";
