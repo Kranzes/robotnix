@@ -1,0 +1,302 @@
+{
+  "G": {
+    "branch": "arrow-12.1",
+    "name": "10or G",
+    "variant": "userdebug",
+    "vendor": "10or"
+  },
+  "GM8_sprout": {
+    "branch": "arrow-11.0",
+    "name": "GM 8",
+    "variant": "userdebug",
+    "vendor": "gm"
+  },
+  "OP4A89": {
+    "branch": "arrow-12.1",
+    "name": "PCLM10",
+    "variant": "userdebug",
+    "vendor": "oppo"
+  },
+  "RMX1801": {
+    "branch": "arrow-12.1",
+    "name": "Realme 2 Pro",
+    "variant": "userdebug",
+    "vendor": "realme"
+  },
+  "RMX2020": {
+    "branch": "arrow-12.1",
+    "name": "realme Monet",
+    "variant": "userdebug",
+    "vendor": "realme"
+  },
+  "X00T": {
+    "branch": "arrow-12.1",
+    "name": "Asus Zenfone Max Pro M1",
+    "variant": "userdebug",
+    "vendor": "asus"
+  },
+  "X01BD": {
+    "branch": "arrow-12.1",
+    "name": "Asus Zenfone Max Pro M2",
+    "variant": "userdebug",
+    "vendor": "asus"
+  },
+  "beryllium": {
+    "branch": "arrow-11.0",
+    "name": "POCOPHONE F1",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "blueline": {
+    "branch": "arrow-12.1",
+    "name": "Pixel 3",
+    "variant": "userdebug",
+    "vendor": "google"
+  },
+  "cas": {
+    "branch": "arrow-12.1",
+    "name": "M2007J1SC",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "cheeseburger": {
+    "branch": "arrow-11.0",
+    "name": "ONEPLUS A5000",
+    "variant": "userdebug",
+    "vendor": "oneplus"
+  },
+  "clover": {
+    "branch": "arrow-11.0",
+    "name": "MI PAD 4",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "cmi": {
+    "branch": "arrow-11.0",
+    "name": "Mi 10 Pro",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "crosshatch": {
+    "branch": "arrow-12.1",
+    "name": "Pixel 3 XL",
+    "variant": "userdebug",
+    "vendor": "google"
+  },
+  "crownlte": {
+    "branch": "arrow-12.1",
+    "name": "SM-N960F",
+    "variant": "userdebug",
+    "vendor": "samsung"
+  },
+  "davinci": {
+    "branch": "arrow-12.1",
+    "name": "Mi 9T",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "dumpling": {
+    "branch": "arrow-11.0",
+    "name": "ONEPLUS A5010",
+    "variant": "userdebug",
+    "vendor": "oneplus"
+  },
+  "enchilada": {
+    "branch": "arrow-11.0",
+    "name": "OnePlus6",
+    "variant": "userdebug",
+    "vendor": "oneplus"
+  },
+  "gauguin": {
+    "branch": "arrow-12.1",
+    "name": "M2007J17G",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "ginkgo": {
+    "branch": "arrow-12.1",
+    "name": "Redmi Note 8/8T",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "guacamole": {
+    "branch": "arrow-12.1",
+    "name": "GM1917",
+    "variant": "userdebug",
+    "vendor": "oneplus"
+  },
+  "kebab": {
+    "branch": "arrow-12.1",
+    "name": "KB2003",
+    "variant": "userdebug",
+    "vendor": "oneplus"
+  },
+  "land": {
+    "branch": "arrow-11.0",
+    "name": "Redmi 3S",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "lavender": {
+    "branch": "arrow-12.1",
+    "name": "Redmi Note 7",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "lisa": {
+    "branch": "arrow-12.1",
+    "name": "11 Lite 5G NE",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "lmi": {
+    "branch": "arrow-11.0",
+    "name": "Redmi K30 Pro",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "merlinx": {
+    "branch": "arrow-12.1",
+    "name": "Redmi Note 9",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "miatoll": {
+    "branch": "arrow-12.1",
+    "name": "Miatoll",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "mido": {
+    "branch": "arrow-11.0",
+    "name": "Redmi Note 4",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "oneplus3": {
+    "branch": "arrow-11.0",
+    "name": "OnePlus 3/3T",
+    "variant": "userdebug",
+    "vendor": "oneplus"
+  },
+  "perseus": {
+    "branch": "arrow-11.0",
+    "name": "Mi MIX 3",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "phoenix": {
+    "branch": "arrow-12.1",
+    "name": "POCO X2",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "polaris": {
+    "branch": "arrow-11.0",
+    "name": "Mi MIX 2S",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "potter": {
+    "branch": "arrow-11.0",
+    "name": "Moto G5 Plus",
+    "variant": "userdebug",
+    "vendor": "motorola"
+  },
+  "raphael": {
+    "branch": "arrow-12.1",
+    "name": "Redmi K20 Pro",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "sake": {
+    "branch": "arrow-11.0",
+    "name": "ZenFone 8",
+    "variant": "userdebug",
+    "vendor": "asus"
+  },
+  "sanders": {
+    "branch": "arrow-11.0",
+    "name": "Moto G (5S) Plus",
+    "variant": "userdebug",
+    "vendor": "motorola"
+  },
+  "star2lte": {
+    "branch": "arrow-12.1",
+    "name": "SM-G965F",
+    "variant": "userdebug",
+    "vendor": "samsung"
+  },
+  "starlte": {
+    "branch": "arrow-12.1",
+    "name": "SM-G960F",
+    "variant": "userdebug",
+    "vendor": "samsung"
+  },
+  "surya": {
+    "branch": "arrow-12.1",
+    "name": "POCO X3 NFC",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "sweet": {
+    "branch": "arrow-12.1",
+    "name": "Redmi Note 10 Pro",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "taimen": {
+    "branch": "arrow-12.1",
+    "name": "Pixel 2 XL",
+    "variant": "userdebug",
+    "vendor": "google"
+  },
+  "thyme": {
+    "branch": "arrow-12.1",
+    "name": "M2102J2SC",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "umi": {
+    "branch": "arrow-11.0",
+    "name": "Mi 10",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "vayu": {
+    "branch": "arrow-12.1",
+    "name": "Poco X3 Pro",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "veux": {
+    "branch": "arrow-12.1",
+    "name": "POCO X4 Pro 5G",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "violet": {
+    "branch": "arrow-11.0",
+    "name": "Redmi Note 7 Pro",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "walleye": {
+    "branch": "arrow-11.0",
+    "name": "Pixel 2",
+    "variant": "userdebug",
+    "vendor": "google"
+  },
+  "wayne": {
+    "branch": "arrow-11.0",
+    "name": "MI 6X",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  },
+  "whyred": {
+    "branch": "arrow-12.1",
+    "name": "Redmi Note 5",
+    "variant": "userdebug",
+    "vendor": "xiaomi"
+  }
+}

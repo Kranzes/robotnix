@@ -1,0 +1,512 @@
+{
+  "device/10or/G": {
+    "date": "2022-07-25T17:45:49+05:30",
+    "deepClone": false,
+    "deps": [],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/2ldnvbwp6q6bc3nl1qcf5w6rlpcg3ph1-android_device_10or_G",
+    "rev": "111eab62fc6c825b646739098611b8340d36c949",
+    "sha256": "0mvgq86ycp6cbgvpiixxdqx8kc7knai1f4wr4lmlwz3whfyrfjxj",
+    "url": "https://github.com/ArrowOS-Devices/android_device_10or_G"
+  },
+  "device/asus/X00T": {
+    "date": "2022-03-27T23:03:28+05:30",
+    "deepClone": false,
+    "deps": [
+      "kernel/asus/sdm660",
+      "vendor/asus",
+      "packages/apps/GcamGOPrebuilt"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/36dwbslfmxdpknc6a2j5lzjbhc5j4zng-android_device_asus_X00T",
+    "rev": "61af8ef10fcae1538c5fbb413386762fa6269b44",
+    "sha256": "15yb24qc256rylf51y4rpnam2p8rb8r791cgsknivrygfbwdlw5q",
+    "url": "https://github.com/ArrowOS-Devices/android_device_asus_X00T"
+  },
+  "device/asus/X01BD": {
+    "date": "2022-07-27T15:22:03+05:30",
+    "deepClone": false,
+    "deps": [
+      "vendor/asus",
+      "device/asus/sdm660-common",
+      "vendor/lawnchair"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/kwf5k9h8c30cfs0yf4wkhdc9qmwi73c0-android_device_asus_X01BD",
+    "rev": "e83933c31de7aafe6ed57ac5bda0d08827f2d2aa",
+    "sha256": "16iypdihjkfqwib5y0nd0qn7kas513is6l51a16bpkqhxva16dya",
+    "url": "https://github.com/ArrowOS-Devices/android_device_asus_X01BD"
+  },
+  "device/asus/sake": {
+    "date": "2022-07-18T23:49:14+01:00",
+    "deepClone": false,
+    "deps": [
+      "vendor/asus/sake",
+      "kernel/asus/sake"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/02h2m1ri6hjwr45g4727srp9a0jna07y-android_device_asus_sake",
+    "rev": "6bac9b1af53c844780e53629459903f28664a646",
+    "sha256": "0m6rq739px376bvada5qxssafm7qfvf3d63lv8q4gpq31qsjc07i",
+    "url": "https://github.com/ArrowOS-Devices/android_device_asus_sake"
+  },
+  "device/google/blueline": {
+    "date": "2021-11-30T14:51:00+08:00",
+    "deepClone": false,
+    "deps": [
+      "device/google/crosshatch"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/636dfarm5msvamaagrm2hgyqyqgwq6z9-android_device_google_blueline",
+    "rev": "2e92e45772eda4e46d875f05561549b57eb4c0ec",
+    "sha256": "01s42vs8svggkhpz9zxvkisbjhvawjxpi2q1wbd32lsfc55ldxjb",
+    "url": "https://github.com/ArrowOS-Devices/android_device_google_blueline"
+  },
+  "device/google/crosshatch": {
+    "date": "2022-06-11T15:00:53+08:00",
+    "deepClone": false,
+    "deps": [
+      "kernel/google/bluecross",
+      "vendor/google",
+      "packages/apps/GCamGOPrebuilt",
+      "packages/apps/ElmyraService"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/23m2v622yg3fwcn6kbmv88r8lrx55qp7-android_device_google_crosshatch",
+    "rev": "e5826cf8f877a9244bb2b79567dbfd9efa436d49",
+    "sha256": "1vxr7k9pj0qyc2118zllagvj4jgbvd4nj4xgla2bi6bl2p3h22j4",
+    "url": "https://github.com/ArrowOS-Devices/android_device_google_crosshatch"
+  },
+  "device/google/taimen": {
+    "date": "2022-04-22T11:45:22+00:00",
+    "deepClone": false,
+    "deps": [
+      "device/google/wahoo",
+      "kernel/google/wahoo",
+      "vendor/google",
+      "packages/apps/GCamGOPrebuilt",
+      "packages/apps/ElmyraService"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/m7bvg9nacag71qp7fijkrj5xb3kvfgjy-android_device_google_taimen",
+    "rev": "ae723ad21f25e5a54adadd995c00e5fad9c83b77",
+    "sha256": "1kdcjsybam86l4dxryzq7bpb0fmm56y8dicxkvy3d6p977v7gzpx",
+    "url": "https://github.com/ArrowOS-Devices/android_device_google_taimen"
+  },
+  "device/oneplus/guacamole": {
+    "date": "2022-07-07T14:18:21+08:00",
+    "deepClone": false,
+    "deps": [
+      "kernel/oneplus/sm8150",
+      "vendor/oneplus/guacamole"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/qkrpxcjdqlcx3hlw4ly0gzfhysxfvbym-android_device_oneplus_guacamole",
+    "rev": "92f4a77c19562a236f251e62680e2411ea6d9a6e",
+    "sha256": "0vw9337102gy2ddkbpm3znhgibbb0axifc1wkdgadhbrwpz03ryq",
+    "url": "https://github.com/ArrowOS-Devices/android_device_oneplus_guacamole"
+  },
+  "device/oneplus/kebab": {
+    "date": "2022-07-23T15:04:03+08:00",
+    "deepClone": false,
+    "deps": [
+      "device/oneplus/sm8250-common",
+      "vendor/oneplus/kebab"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/725zfdg463sphkp20yb2s1ipmyrx2r4k-android_device_oneplus_kebab",
+    "rev": "20ba1ab918a739add1da4fadb53ee32db912e074",
+    "sha256": "1zy21xipg4nzg4j0h8fa2b37hzk0cm0awdbjr5d590r0l99g7if4",
+    "url": "https://github.com/ArrowOS-Devices/android_device_oneplus_kebab"
+  },
+  "device/oppo/OP4A89": {
+    "date": "2022-05-26T23:08:26+08:00",
+    "deepClone": false,
+    "deps": [
+      "kernel/oppo/sm8150",
+      "vendor/oppo/OP4A89"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/rcpxgw5wvdmxs8xhav1alaip28bsgh9k-android_device_oppo_OP4A89",
+    "rev": "27a4bc9f1c63cc60c8915c4a5d36583c405d8a19",
+    "sha256": "0dsvm3m3xan6vq6jsyivy0zlpy40ibkddhqysvidbzmicx3klywl",
+    "url": "https://github.com/ArrowOS-Devices/android_device_oppo_OP4A89"
+  },
+  "device/realme/RMX1801": {
+    "date": "2022-07-16T03:11:09+00:00",
+    "deepClone": false,
+    "deps": [
+      "packages/apps/Gcam",
+      "packages/apps/RealmeDirac",
+      "prebuilts/clang/host/linux-x86/clang-r437112b"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/i170amw2qybya0izwd6fafb4bb26llf0-android_device_realme_RMX1801",
+    "rev": "a5329f4752bca7e2e010669c175c98525ad113c8",
+    "sha256": "1z95g7pmc3rdxak42yd6yjcv2x6dg65aj3j79x0iac967rl8l2wj",
+    "url": "https://github.com/ArrowOS-Devices/android_device_realme_RMX1801"
+  },
+  "device/realme/RMX2020": {
+    "date": "2022-07-21T12:05:35+05:30",
+    "deepClone": false,
+    "deps": [
+      "vendor/realme/RMX2020",
+      "kernel/realme/RMX2020",
+      "vendor/realme/RMX2020-ims",
+      "packages/apps/GCamGOPrebuilt"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/x9qx98p8wdkzx93ysd7wy27dg8awk225-android_device_realme_RMX2020",
+    "rev": "c2785fc372072f95ba153b8adc7cca176a691fd3",
+    "sha256": "1q6ir1c4yvqdzbnhilcfacdacxnzs6lkapdxsg4dd2wlbjynkd35",
+    "url": "https://github.com/ArrowOS-Devices/android_device_realme_RMX2020"
+  },
+  "device/samsung/crownlte": {
+    "date": "2022-05-20T23:30:50+04:00",
+    "deepClone": false,
+    "deps": [
+      "device/samsung/exynos9810-common",
+      "vendor/samsung/exynos9810-common",
+      "vendor/samsung/crownlte",
+      "hardware/samsung",
+      "device/samsung_slsi/sepolicy",
+      "kernel/samsung/exynos9810"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/7842x0f5yllzb21b0ni2bnqszgsp2ybq-android_device_samsung_crownlte",
+    "rev": "c20abcf47bbfb89c9c03476fb775259af88c2dbd",
+    "sha256": "09vfa5inq9pj9yrqs01avzgzsqayb4l89zakarx0qfg1gn7i1jsw",
+    "url": "https://github.com/ArrowOS-Devices/android_device_samsung_crownlte"
+  },
+  "device/samsung/star2lte": {
+    "date": "2022-05-16T11:26:10+04:00",
+    "deepClone": false,
+    "deps": [
+      "device/samsung/exynos9810-common",
+      "vendor/samsung/exynos9810-common",
+      "vendor/samsung/star2lte",
+      "hardware/samsung",
+      "device/samsung_slsi/sepolicy",
+      "kernel/samsung/exynos9810"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/gi6v1pini49hc5d9mnd3nm5jw01xzwir-android_device_samsung_star2lte",
+    "rev": "9e99ee32742a2fbcde09cb80ecd9dfabf9c6f558",
+    "sha256": "1sgph1jw9yf3fglg6zbwfh52kix9lcc9zs0hhfj1yc4ki6m3xnqn",
+    "url": "https://github.com/ArrowOS-Devices/android_device_samsung_star2lte"
+  },
+  "device/samsung/starlte": {
+    "date": "2022-05-16T11:24:17+04:00",
+    "deepClone": false,
+    "deps": [
+      "device/samsung/exynos9810-common",
+      "vendor/samsung/exynos9810-common",
+      "vendor/samsung/starlte",
+      "hardware/samsung",
+      "device/samsung_slsi/sepolicy",
+      "kernel/samsung/exynos9810"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/jmw8sh7lrzlxv871ddzqrvibrd6agbyh-android_device_samsung_starlte",
+    "rev": "56462ed18673cfb04cde1048a13927aa97966ff6",
+    "sha256": "04rl5rx1jhyf9rps0zc229df8i8r9b2ih6igilg803cw45r35qwg",
+    "url": "https://github.com/ArrowOS-Devices/android_device_samsung_starlte"
+  },
+  "device/xiaomi/davinci": {
+    "date": "2022-06-21T11:28:45+02:00",
+    "deepClone": false,
+    "deps": [
+      "device/xiaomi/sm6150-common",
+      "vendor/xiaomi/davinci",
+      "vendor/xiaomi/sm6150-common",
+      "kernel/xiaomi/davinci",
+      "hardware/xiaomi"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/n31wcafh4mspbx43d7p5kpbk1lp5c3vr-android_device_xiaomi_davinci",
+    "rev": "0fef26ec75052ab05a2b7e8893d64b6c4776958a",
+    "sha256": "0zpiblcpnbb9i3mk81vwi2v9sq4ylbnx7dvhgr2c7c91zrjn5m97",
+    "url": "https://github.com/ArrowOS-Devices/android_device_xiaomi_davinci"
+  },
+  "device/xiaomi/gauguin": {
+    "date": "2022-07-08T14:42:15+08:00",
+    "deepClone": false,
+    "deps": [
+      "device/xiaomi/extras",
+      "hardware/xiaomi",
+      "kernel/xiaomi/gauguin",
+      "vendor/xiaomi/gauguin",
+      "packages/apps/GCamGOPrebuilt"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/v743d9rhril0p4za0zcwpb556g5j8759-android_device_xiaomi_gauguin",
+    "rev": "ff291c4b63c48a898885bd11bc53b54fe9db181f",
+    "sha256": "0idcvcls1h292f0ndigxb41na5k7kc50sqwz0dgmswp2bb85ca86",
+    "url": "https://github.com/ArrowOS-Devices/android_device_xiaomi_gauguin"
+  },
+  "device/xiaomi/ginkgo": {
+    "date": "2022-05-25T21:51:23+05:30",
+    "deepClone": false,
+    "deps": [
+      "kernel/xiaomi/ginkgo",
+      "vendor/xiaomi/ginkgo",
+      "vendor/miuicamera"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/wcf6724q1kq559df05c4vdd4ks1s0jzd-android_device_xiaomi_ginkgo",
+    "rev": "ea70b939811de325e4e1ebd5b8f4190eea3e9dc0",
+    "sha256": "0pmkbg4g4mf47a1wvfbqcijbhscknz224v4wn3inq966q63zvp9i",
+    "url": "https://github.com/ArrowOS-Devices/android_device_xiaomi_ginkgo"
+  },
+  "device/xiaomi/lisa": {
+    "date": "2022-03-20T11:27:11+00:00",
+    "deepClone": false,
+    "deps": [
+      "device/xiaomi/sm8350-common",
+      "kernel/xiaomi/lisa",
+      "vendor/xiaomi",
+      "packages/apps/GCamGOPrebuilt"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/2dbx0gprf5cgmn3cyqq7iv2ryl1d1hb2-android_device_xiaomi_lisa",
+    "rev": "c321c6aac490957e021db25b4557fcdcafc5e8c1",
+    "sha256": "01s7qkapg7rxlbsjqizmpph6mz7bnj4yvvnhqqmniqkjplhyba69",
+    "url": "https://github.com/ArrowOS-Devices/android_device_xiaomi_lisa"
+  },
+  "device/xiaomi/merlinx": {
+    "date": "2022-07-29T15:06:23+03:00",
+    "deepClone": false,
+    "deps": [
+      "device/xiaomi/mt6768-common",
+      "vendor/xiaomi/merlinx"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/s5cwh8dg3dy8zciq464z5r2nwqi3yfl0-android_device_xiaomi_merlinx",
+    "rev": "61dd8389ac95a1a05b195c58059c8ccbf4471548",
+    "sha256": "01v5brsjmhlfp1n4nx9z3i1wk9ssmc8lziplgiy1kq3x2kg5mnkm",
+    "url": "https://github.com/ArrowOS-Devices/android_device_xiaomi_merlinx"
+  },
+  "device/xiaomi/miatoll": {
+    "date": "2022-07-27T15:15:14+05:30",
+    "deepClone": false,
+    "deps": [
+      "kernel/xiaomi/sm6250",
+      "device/xiaomi/sm6250-common",
+      "vendor/xiaomi/miatoll",
+      "vendor/xiaomi/sm6250-common",
+      "vendor/lawnchair"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/9jd5az132bk00d213wdjdi61w34x9a9q-android_device_xiaomi_miatoll",
+    "rev": "a2c6c10cee565fe05133f354d331d1b0e827e6be",
+    "sha256": "0y00kqqk73agaczgi99cbd1d1brmmdlcnmbiqdm2sqnqm0931qq6",
+    "url": "https://github.com/ArrowOS-Devices/android_device_xiaomi_miatoll"
+  },
+  "device/xiaomi/phoenix": {
+    "date": "2022-06-28T13:50:48+00:00",
+    "deepClone": false,
+    "deps": [
+      "vendor/xiaomi/phoenix",
+      "kernel/xiaomi/phoenix",
+      "device/xiaomi/extras",
+      "packages/apps/GCamGOPrebuilt"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/imirjh091f414ryqvclvzr9pp3h2avyy-android_device_xiaomi_phoenix",
+    "rev": "3da9c00e59116c511e617b4632f1a6087729434d",
+    "sha256": "0dxnc92wgbihdc5j6kfchgsiy4rqncjp4n795a6mvzadqgismx7p",
+    "url": "https://github.com/ArrowOS-Devices/android_device_xiaomi_phoenix"
+  },
+  "device/xiaomi/raphael": {
+    "date": "2022-06-29T02:52:47+00:00",
+    "deepClone": false,
+    "deps": [
+      "kernel/xiaomi/raphael",
+      "packages/apps/GCamGOPrebuilt",
+      "vendor/xiaomi/raphael"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/l2wr8xd25dya2a45vab4sl2zam74vzpq-android_device_xiaomi_raphael",
+    "rev": "a536400589595b89081cd02c2ad4d4045a867181",
+    "sha256": "146m49l4483g2z5biykhvalnslws7f02priiszgdi9a580k2b038",
+    "url": "https://github.com/ArrowOS-Devices/android_device_xiaomi_raphael"
+  },
+  "device/xiaomi/sweet": {
+    "date": "2022-07-21T12:28:09+02:00",
+    "deepClone": false,
+    "deps": [
+      "vendor/xiaomi/sweet",
+      "kernel/xiaomi/sweet"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/cg2q677ib40hr2llwjwf4xghmwdwbfc9-android_device_xiaomi_sweet",
+    "rev": "73f2b95857be4e465ebd435aaa962ad94e0e6096",
+    "sha256": "1id8n9w8q8wczqxl3845p1ayi098crvs8xidgnprgifzi6nj8bxr",
+    "url": "https://github.com/ArrowOS-Devices/android_device_xiaomi_sweet"
+  },
+  "device/xiaomi/thyme": {
+    "date": "2022-07-08T14:40:28+08:00",
+    "deepClone": false,
+    "deps": [
+      "device/xiaomi/thyme-prebuilt",
+      "hardware/xiaomi",
+      "kernel/xiaomi/thyme",
+      "vendor/xiaomi/thyme",
+      "packages/apps/GCamGOPrebuilt"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/mcgdlkz4h3k2762qfjq6f6ckkg6anhsr-android_device_xiaomi_thyme",
+    "rev": "d958528116850bda3814e8e3c89e44ade7dfbc2f",
+    "sha256": "0yh2f09arvngr4aip9q9dpnkrmjcg1s0wq2cfn3y04crwa838f7b",
+    "url": "https://github.com/ArrowOS-Devices/android_device_xiaomi_thyme"
+  },
+  "device/xiaomi/thyme-prebuilt": {
+    "date": "2022-07-25T16:35:59+00:00",
+    "deepClone": false,
+    "deps": [],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/9wqy6c4wb6wsd9panls786q2pnhfp9jb-android_device_xiaomi_thyme-prebuilt",
+    "rev": "2a18fa2a0547d860cdabbc8c65f4c70786b1d1c8",
+    "sha256": "1qjl7hvj34iz83n941ah80i25vigr7zzr8friilg05l6mkb862m2",
+    "url": "https://gitlab.com/LynnrinChan/android_device_xiaomi_thyme-prebuilt"
+  },
+  "device/xiaomi/vayu": {
+    "date": "2022-07-23T11:28:04+05:30",
+    "deepClone": false,
+    "deps": [
+      "vendor/xiaomi/vayu",
+      "kernel/xiaomi/vayu",
+      "packages/apps/GCamGOPrebuilt",
+      "hardware/xiaomi"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/r7maslgcnzrqyxhfbbkm0h18h6ypa379-android_device_xiaomi_vayu",
+    "rev": "2fa9dfecf7b60f80608bfe5bd7206a94ed4551b0",
+    "sha256": "06rg2r1qnx3cbb8cy9mhknzmbgv7ky2yrz0dp3ca8n1wzwh3qbk8",
+    "url": "https://github.com/ArrowOS-Devices/android_device_xiaomi_vayu"
+  },
+  "device/xiaomi/veux": {
+    "date": "2022-07-29T10:14:09+05:30",
+    "deepClone": false,
+    "deps": [
+      "device/xiaomi/veux-kernel",
+      "vendor/xiaomi/veux",
+      "kernel/xiaomi/sm6375",
+      "packages/apps/GCamGOPrebuilt",
+      "hardware/xiaomi"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/qdhrr72hdgh4zjd6ncxip8dsxx53i1ww-android_device_xiaomi_veux",
+    "rev": "77a9f6dd19d06f5f52d6803d13f18e661dc26a7d",
+    "sha256": "1p9llcnxhzk35f8bqc0avp8l7q6yx3i51y1lwppsab2lq2zk8221",
+    "url": "https://github.com/ArrowOS-Devices/android_device_xiaomi_veux"
+  },
+  "device/xiaomi/whyred": {
+    "date": "2022-04-17T11:13:31+05:30",
+    "deepClone": false,
+    "deps": [
+      "vendor/xiaomi/whyred",
+      "kernel/xiaomi/whyred",
+      "device/xiaomi/extras"
+    ],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/7lbvbcz2dlhk1z5gziqm17vxqdja78v2-android_device_xiaomi_whyred",
+    "rev": "62469745ab30432ea2a8b71ea785a2256cf4ed14",
+    "sha256": "05i2jl2iff3ik5p5a742k937zfzr77rb18n25vxg8flwf4nx26ph",
+    "url": "https://github.com/ArrowOS-Devices/android_device_xiaomi_whyred"
+  },
+  "vendor/asus/sake": {
+    "date": "2022-06-22T00:27:25+02:00",
+    "deepClone": false,
+    "deps": [],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/a6qwfhgwx40bqnwkbs60ji2vshk9arw4-android_vendor_asus_sake",
+    "rev": "1669d8092a7faacc1b65a7fa406c091ebfdea572",
+    "sha256": "1gidkc9fvsjb117a8p14qpi2sg1rzfwkxi2q7hpk79yc1w4xgr78",
+    "url": "https://gitlab.com/arrowos-project/android_vendor_asus_sake"
+  },
+  "vendor/lawnchair": {
+    "date": "2022-07-28T21:38:02+05:30",
+    "deepClone": false,
+    "deps": [],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/cmiaayv9sq2j3fz9axwa4q07z45cry4g-android_vendor_lawnchair",
+    "rev": "61e1cb43850fd7ec1a3349d39cca9549a2292acb",
+    "sha256": "1aiafplvldapq8d07nlflk3qxf7zc8zwjgi48vzrbrjj1263by6i",
+    "url": "https://github.com/SonalSingh18/android_vendor_lawnchair"
+  },
+  "vendor/xiaomi/veux": {
+    "date": "2022-06-21T08:44:33+00:00",
+    "deepClone": false,
+    "deps": [],
+    "fetchLFS": false,
+    "fetchSubmodules": false,
+    "leaveDotGit": false,
+    "path": "/nix/store/ra03v5pcv4pyl56gk27zl0irxfdclnj4-android_vendor_xiaomi_veux",
+    "rev": "03c067f499c9d9a6b9595c37c27a102c3d34f77b",
+    "sha256": "0xn2qwhspdkdacv1dn4ipcwshhiwlcxlf7fwiyxqms82xvlmlhg6",
+    "url": "https://gitlab.com/arrowos-project/android_vendor_xiaomi_veux"
+  }
+}

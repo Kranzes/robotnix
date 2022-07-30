@@ -38,7 +38,7 @@ in
       };
 
       flavor = mkOption {
-        type = types.enum [ "grapheneos" "lineageos" ];
+        type = types.enum [ "grapheneos" "lineageos" "arrowos" ];
         default = "grapheneos";
         description = ''
           Which updater package to use, and which kind of metadata to generate for it.
@@ -84,6 +84,14 @@ in
       (mkIf (cfg.flavor == "lineageos") {
         resources."packages/apps/Updater" = mkIf (cfg.flavor == "lineageos") {
           updater_server_url = "${cfg.url}lineageos-${config.device}.json";
+        };
+      })
+
+      (mkIf (cfg.flavor == "arrowos") {
+        resources."packages/apps/Updater" = mkIf (cfg.flavor == "arrowos") {
+          updater_server_url = "${cfg.url}arrowos-${config.device}.json";
+	  sf_download_url = "";
+	  arrow_download_url = "";
         };
       })
     ]))
